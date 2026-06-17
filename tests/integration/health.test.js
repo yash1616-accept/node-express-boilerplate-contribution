@@ -1,5 +1,9 @@
 const request = require('supertest');
 const app = require('../../src/app');
+const setupTestDB = require('../utils/setupTestDB');
+
+// This initializes and connects the test database before the tests run
+setupTestDB();
 
 describe('Health Check Routes', () => {
     describe('GET /v1/health', () => {
